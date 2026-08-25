@@ -6,7 +6,15 @@
 
 ## 使用
 
-将 [`historian-writing/`](historian-writing/) 安装为 Codex skill。仅当用户明确点名“历史学家 skill”“历史学家写作”或 `historian-writing` 时调用。
+将完整的 [`historian-writing/`](historian-writing/) 文件夹安装为 Codex skill。它是自包含的：只需该文件夹内的 `SKILL.md` 与 `references/`，不需要复制原书或分析目录。
+
+在 Windows PowerShell 中，从已克隆的仓库根目录运行：
+
+```powershell
+Copy-Item -Recurse -Force .\historian-writing "$env:USERPROFILE\.codex\skills\historian-writing"
+```
+
+重新打开 Codex 后，以 `$historian-writing` 调用。仅当用户明确点名“历史学家 skill”“历史学家写作”或 `historian-writing` 时调用。
 
 它适合三类任务：
 

@@ -1,6 +1,6 @@
 # 能力库（v0.1）
 
-每次只选少量能够改变当前文章的能力；不要把所有能力叠加成宏大腔调。统计依据、可用信号与局限见 [`style-signals.md`](style-signals.md)、[`../../analysis/style-findings.md`](../../analysis/style-findings.md) 和 [`../../docs/corpus-boundaries.md`](../../docs/corpus-boundaries.md)。
+每次只选少量能够改变当前文章的能力；不要把所有能力叠加成宏大腔调。经语料验证的语言信号和局限已浓缩在 [`style-signals.md`](style-signals.md)，因此安装时只需保留整个 `historian-writing/` 文件夹。
 
 ## 1. 条件—机制—限度
 

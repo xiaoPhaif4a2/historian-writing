@@ -53,6 +53,8 @@ def main() -> None:
             destination = (document.parent / target).resolve()
             if not destination.exists():
                 fail(f"broken local Markdown link in {document.relative_to(ROOT)}: {target}")
+            if document.is_relative_to(ROOT / "historian-writing") and not destination.is_relative_to(ROOT / "historian-writing"):
+                fail(f"skill package has an external local link: {document.relative_to(ROOT)} -> {target}")
 
     inventory = json.loads((ROOT / "analysis" / "output" / "corpus_inventory.json").read_text(encoding="utf-8"))
     profile = json.loads((ROOT / "analysis" / "output" / "style_profile.json").read_text(encoding="utf-8"))
