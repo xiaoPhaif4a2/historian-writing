@@ -1,0 +1,15 @@
+# Local source corpus: never commit the supplied books or their extracted text.
+/sources_and_references/
+/analysis/output/raw/
+/analysis/output/run.log
+/analysis/output/run.error.log
+
+# Local execution artifacts.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Editor and operating-system metadata.
+.DS_Store
+Thumbs.db
