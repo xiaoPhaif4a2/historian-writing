@@ -1,71 +1,52 @@
 # 历史学家写作 / historian-writing
 
-一个仅在用户显式调用时使用的中文写作 skill。它从经过界定的历史著作中提炼可复用的写作能力，用于起草、重写和把零散想法落成文章；它不让用户选择或显示具体模仿对象。
-
-第一版把《剑桥中国晚清史》《剑桥中华民国史》四卷作为一个集体样本，并结合现有汤因比中译著作。目标是更有解释力、结构层次和叙述控制的中文写作，而不是复刻某位作者的口癖。
+一个仅在用户显式调用时使用的中文写作 skill。它把经过界定的语料转成按功能组织的能力：历史语料负责文章结构、历史解释、尺度切换和判断边界；独立的文学中译语料负责句子节奏、自然过渡、具体与抽象转换、叙述距离，以及叙述、人物反应与评述的衔接。运行时不让用户选择作者，也不模仿作者。
 
 ## 使用
 
-将完整的 [`historian-writing/`](historian-writing/) 文件夹安装为 Codex skill。它是自包含的：只需该文件夹内的 `SKILL.md` 与 `references/`，不需要复制原书或分析目录。
+将完整的 [`historian-writing/`](historian-writing/) 文件夹安装为 Codex skill。它是自包含的，不需要复制原书或分析目录。重新打开 Codex 后，以 `$historian-writing` 调用；只有用户明确点名“历史学家 skill”“历史学家写作”或 `historian-writing` 时才能使用。
 
-在 Windows PowerShell 中，从已克隆的仓库根目录运行：
+适用任务包括从零起草、大幅重写、把零散想法发展成文章和受约束的简单编辑。默认直接交付成稿；需要诊断、教学说明或前后对照时，由用户明确提出。
 
-```powershell
-Copy-Item -Recurse -Force .\historian-writing "$env:USERPROFILE\.codex\skills\historian-writing"
-```
+## 能力与强度
 
-重新打开 Codex 后，以 `$historian-writing` 调用。仅当用户明确点名“历史学家 skill”“历史学家写作”或 `historian-writing` 时调用。
+- 剑桥中国史与汤因比中译样本支持结构、解释、尺度与判断边界。
+- 《安娜·卡列尼娜》高惠群、傅石球中译本作为独立的“文学语言组织”来源，只支持中文表达层面的能力，不迁移小说思想、人物、情节、社会判断或价值立场。
+- 文学语言组织自动路由：通知、公文和报告克制；一般写作轻量；评论、随笔和历史评述中度；明确文学创作充分。
+- 文学性不等于增加形容词、长句或隐喻。事实文本不能补造场景、心理、对白、引语、事件或数据，不能改变原意与证据等级。
 
-它适合三类任务：
-
-- 从零起草文章；
-- 大幅重写既有草稿；
-- 将零散观点、材料或提纲发展成文章。
-
-默认直接交付所需成稿。需要诊断、教学说明或前后对照时，用户应明确提出。
-
-## 方法边界
-
-- 该 skill 学习的是现有中文译本呈现的写作方法，不声称还原原作者的英文语言。
-- 事实性文本保留用户给出的事实和观点；可以展开背景联系、比较和假设，不能把联想出的事件、数据、引语或人物观点写成事实。
-- 它默认不把写作任务扩大为事实研究。用户明确授权研究时，才另行核验资料。
-- 输出不标注“仿费正清”“仿汤因比”等来源；README 与文档公开说明方法与语料边界。
-
-详细边界见 [docs/corpus-boundaries.md](docs/corpus-boundaries.md)、[docs/methodology.md](docs/methodology.md) 和 [analysis/style-findings.md](analysis/style-findings.md)。
+本项目学习的是具体中译本呈现的中文表达，不能称作原作者本人的中文风格。详细边界见 [语料边界](docs/corpus-boundaries.md)、[方法](docs/methodology.md) 和 [语料画像](analysis/style-findings.md)。
 
 ## 仓库结构
 
 ```text
-historian-writing/        可安装的 skill
-analysis/                 本地提取与分析脚本
-analysis/output/          可提交的统计结果；原始提取文本被忽略
-evals/                    正向、反向与对照评测
+historian-writing/        可安装的 self-contained skill
+analysis/                 本地提取、来源目录与分析脚本
+analysis/output/          可提交的聚合统计；全文抽取被忽略
+evals/                    正向、反向与边界评测
 docs/                     方法、语料边界与路线图
 sources_and_references/   本地原书，始终被 Git 忽略
 ```
 
-运行本地分析：
+`analysis/source_catalog.json` 以 SHA-256 匹配本地文件，并只向公开结果写入安全 `source_id`。运行分析：
 
 ```powershell
-& <python> .\analysis\analyze_corpus.py
+& <python-with-pypdf> .\analysis\analyze_corpus.py
+& <python> .\analysis\select_close_reading.py
 ```
 
-脚本只将原始抽取文本写入被忽略的 `analysis/output/raw/`；版本库中的结果是元数据和聚合统计。
+脚本仅把全文写入 `analysis/output/raw/`。公开画像保留 `cambridge_china`、`toynbee`、`historical_combined` 与独立 `anna_translation`；不存在把 Anna 并入的总体 `combined`。
 
 ## 验收
 
-评测同时检查：
+```powershell
+& <python> .\evals\validate_evals.py
+& <python> .\analysis\validate_project.py
+& <python> <skill-creator>\scripts\quick_validate.py .\historian-writing
+```
 
-1. 判断是否呈现条件、机制、制约与结果；
-2. 段落是否承担明确功能并有推进关系；
-3. 时间、空间和观察尺度切换是否清晰；
-4. 句式、连接和判断语气是否符合经语料验证的规律；
-5. 是否避免空洞宏大词、机械长句和无证据断言；
-6. 是否保留用户原意与确定事实；
-7. 在盲评中是否比普通版本更像成熟的历史写作。
+项目评测检查结构解释、前后流畅节奏、具体到抽象的过渡、事实与原意边界、通知公文的反向路由，以及是否只做了形容词、长句或隐喻层面的表面美化。见 [evals/README.md](evals/README.md)。
 
-评测案例和评分表见 [evals/README.md](evals/README.md)。
+## 路线
 
-## 远期路线
-
-本项目当前是可独立使用的 skill。未来只有当评测表明指令与能力库存在稳定上限时，才评估微调或其他模型化方案；不把训练模型当作预设终点。见 [docs/roadmap.md](docs/roadmap.md)。
+当前仍是可独立安装的指令型 skill。只有持续行为评测显示其存在稳定上限时，才评估模型化方案；不把微调当作预设终点。见 [docs/roadmap.md](docs/roadmap.md)。

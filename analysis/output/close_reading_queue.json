@@ -1,243 +1,341 @@
 {
-  "sample_count": 20,
+  "sample_count": 26,
   "samples": [
     {
-      "source": "剑桥中华民国史(上卷) (剑桥中华民国史(上卷)) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "locator": "page:3",
-      "chinese_character_count": 987,
+      "source_id": "anna-karenina-zh-gao-fu",
+      "collection": "anna_translation",
+      "locator": "spine:11;file:text/part0009.html",
+      "chinese_character_count": 1262,
+      "reading_focus": "literary_language_organization",
       "questions": [
-        "本段承担什么结构任务？",
-        "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
-        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+        "叙述、人物反应与评论怎样自然衔接？",
+        "具体细节怎样承载含义，并在何处转入抽象判断？",
+        "叙述距离、句子长短和段落过渡怎样共同调节节奏？",
+        "哪些内容属于人物、情节、价值立场或译者选择，必须留在原作中？"
       ]
     },
     {
-      "source": "剑桥中华民国史(上卷) (剑桥中华民国史(上卷)) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "locator": "page:212",
-      "chinese_character_count": 1152,
+      "source_id": "anna-karenina-zh-gao-fu",
+      "collection": "anna_translation",
+      "locator": "spine:60;file:text/part0058.html",
+      "chinese_character_count": 1753,
+      "reading_focus": "literary_language_organization",
       "questions": [
-        "本段承担什么结构任务？",
-        "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
-        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+        "叙述、人物反应与评论怎样自然衔接？",
+        "具体细节怎样承载含义，并在何处转入抽象判断？",
+        "叙述距离、句子长短和段落过渡怎样共同调节节奏？",
+        "哪些内容属于人物、情节、价值立场或译者选择，必须留在原作中？"
       ]
     },
     {
-      "source": "剑桥中华民国史(上卷) (剑桥中华民国史(上卷)) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "locator": "page:389",
-      "chinese_character_count": 1134,
+      "source_id": "anna-karenina-zh-gao-fu",
+      "collection": "anna_translation",
+      "locator": "spine:109;file:text/part0107.html",
+      "chinese_character_count": 2594,
+      "reading_focus": "literary_language_organization",
       "questions": [
-        "本段承担什么结构任务？",
-        "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
-        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+        "叙述、人物反应与评论怎样自然衔接？",
+        "具体细节怎样承载含义，并在何处转入抽象判断？",
+        "叙述距离、句子长短和段落过渡怎样共同调节节奏？",
+        "哪些内容属于人物、情节、价值立场或译者选择，必须留在原作中？"
       ]
     },
     {
-      "source": "剑桥中华民国史(上卷) (剑桥中华民国史(上卷)) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "locator": "page:558",
-      "chinese_character_count": 726,
+      "source_id": "anna-karenina-zh-gao-fu",
+      "collection": "anna_translation",
+      "locator": "spine:162;file:text/part0160.html",
+      "chinese_character_count": 4248,
+      "reading_focus": "literary_language_organization",
       "questions": [
-        "本段承担什么结构任务？",
-        "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
-        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+        "叙述、人物反应与评论怎样自然衔接？",
+        "具体细节怎样承载含义，并在何处转入抽象判断？",
+        "叙述距离、句子长短和段落过渡怎样共同调节节奏？",
+        "哪些内容属于人物、情节、价值立场或译者选择，必须留在原作中？"
       ]
     },
     {
-      "source": "剑桥中华民国史（下卷） (剑桥中华民国史（下卷）.pdf) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "locator": "page:2",
-      "chinese_character_count": 979,
+      "source_id": "anna-karenina-zh-gao-fu",
+      "collection": "anna_translation",
+      "locator": "spine:212;file:text/part0210.html",
+      "chinese_character_count": 2571,
+      "reading_focus": "literary_language_organization",
       "questions": [
-        "本段承担什么结构任务？",
-        "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
-        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+        "叙述、人物反应与评论怎样自然衔接？",
+        "具体细节怎样承载含义，并在何处转入抽象判断？",
+        "叙述距离、句子长短和段落过渡怎样共同调节节奏？",
+        "哪些内容属于人物、情节、价值立场或译者选择，必须留在原作中？"
       ]
     },
     {
-      "source": "剑桥中华民国史（下卷） (剑桥中华民国史（下卷）.pdf) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "locator": "page:203",
-      "chinese_character_count": 1150,
+      "source_id": "anna-karenina-zh-gao-fu",
+      "collection": "anna_translation",
+      "locator": "spine:260;file:text/part0258.html",
+      "chinese_character_count": 1591,
+      "reading_focus": "literary_language_organization",
       "questions": [
-        "本段承担什么结构任务？",
-        "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
-        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+        "叙述、人物反应与评论怎样自然衔接？",
+        "具体细节怎样承载含义，并在何处转入抽象判断？",
+        "叙述距离、句子长短和段落过渡怎样共同调节节奏？",
+        "哪些内容属于人物、情节、价值立场或译者选择，必须留在原作中？"
       ]
     },
     {
-      "source": "剑桥中华民国史（下卷） (剑桥中华民国史（下卷）.pdf) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "locator": "page:410",
-      "chinese_character_count": 1055,
-      "questions": [
-        "本段承担什么结构任务？",
-        "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
-        "哪些部分只属于该材料或译者，不能升级成通用规则？"
-      ]
-    },
-    {
-      "source": "剑桥中华民国史（下卷） (剑桥中华民国史（下卷）.pdf) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "locator": "page:607",
-      "chinese_character_count": 1062,
-      "questions": [
-        "本段承担什么结构任务？",
-        "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
-        "哪些部分只属于该材料或译者，不能升级成通用规则？"
-      ]
-    },
-    {
-      "source": "剑桥中国晚清史, 1800—1911年 (上卷) = The Cambridge History of China, Vol. 10 Late Ching, 1800-1911, Part 1 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v10-zh",
       "collection": "cambridge_china",
       "locator": "page:13",
       "chinese_character_count": 718,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "剑桥中国晚清史, 1800—1911年 (上卷) = The Cambridge History of China, Vol. 10 Late Ching, 1800-1911, Part 1 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v10-zh",
       "collection": "cambridge_china",
       "locator": "page:233",
       "chinese_character_count": 699,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "剑桥中国晚清史, 1800—1911年 (上卷) = The Cambridge History of China, Vol. 10 Late Ching, 1800-1911, Part 1 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v10-zh",
       "collection": "cambridge_china",
       "locator": "page:453",
       "chinese_character_count": 713,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "剑桥中国晚清史, 1800—1911年 (上卷) = The Cambridge History of China, Vol. 10 Late Ching, 1800-1911, Part 1 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v10-zh",
       "collection": "cambridge_china",
       "locator": "page:673",
       "chinese_character_count": 627,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "剑桥中国晚清史, 1800—1911年 (下卷) = The Cambridge History of China, Vol. 11 Late Ching, 1800-1911, Part 2 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v11-zh",
       "collection": "cambridge_china",
       "locator": "page:11",
       "chinese_character_count": 692,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "剑桥中国晚清史, 1800—1911年 (下卷) = The Cambridge History of China, Vol. 11 Late Ching, 1800-1911, Part 2 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v11-zh",
       "collection": "cambridge_china",
       "locator": "page:282",
       "chinese_character_count": 661,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "剑桥中国晚清史, 1800—1911年 (下卷) = The Cambridge History of China, Vol. 11 Late Ching, 1800-1911, Part 2 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v11-zh",
       "collection": "cambridge_china",
       "locator": "page:508",
       "chinese_character_count": 606,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "剑桥中国晚清史, 1800—1911年 (下卷) = The Cambridge History of China, Vol. 11 Late Ching, 1800-1911, Part 2 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v11-zh",
       "collection": "cambridge_china",
       "locator": "page:722",
       "chinese_character_count": 615,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "汤因比著作集（套装全7册）含《历史研究（上、下）》《人类与大地母亲：一部叙事体世界历史》《一个历史学家的宗教观》《文明经受考验》《习... (z-library.sk, 1lib.sk, z-lib.sk).epub",
+      "source_id": "cambridge-republican-china-v12-zh",
+      "collection": "cambridge_china",
+      "locator": "page:3",
+      "chinese_character_count": 987,
+      "reading_focus": "historical_explanation",
+      "questions": [
+        "本段承担什么结构或历史解释任务？",
+        "判断如何连接条件、机制、材料、反向力量或结果？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
+        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "cambridge-republican-china-v12-zh",
+      "collection": "cambridge_china",
+      "locator": "page:212",
+      "chinese_character_count": 1152,
+      "reading_focus": "historical_explanation",
+      "questions": [
+        "本段承担什么结构或历史解释任务？",
+        "判断如何连接条件、机制、材料、反向力量或结果？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
+        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "cambridge-republican-china-v12-zh",
+      "collection": "cambridge_china",
+      "locator": "page:389",
+      "chinese_character_count": 1134,
+      "reading_focus": "historical_explanation",
+      "questions": [
+        "本段承担什么结构或历史解释任务？",
+        "判断如何连接条件、机制、材料、反向力量或结果？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
+        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "cambridge-republican-china-v12-zh",
+      "collection": "cambridge_china",
+      "locator": "page:558",
+      "chinese_character_count": 726,
+      "reading_focus": "historical_explanation",
+      "questions": [
+        "本段承担什么结构或历史解释任务？",
+        "判断如何连接条件、机制、材料、反向力量或结果？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
+        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "cambridge-republican-china-v13-zh",
+      "collection": "cambridge_china",
+      "locator": "page:2",
+      "chinese_character_count": 979,
+      "reading_focus": "historical_explanation",
+      "questions": [
+        "本段承担什么结构或历史解释任务？",
+        "判断如何连接条件、机制、材料、反向力量或结果？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
+        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "cambridge-republican-china-v13-zh",
+      "collection": "cambridge_china",
+      "locator": "page:203",
+      "chinese_character_count": 1150,
+      "reading_focus": "historical_explanation",
+      "questions": [
+        "本段承担什么结构或历史解释任务？",
+        "判断如何连接条件、机制、材料、反向力量或结果？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
+        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "cambridge-republican-china-v13-zh",
+      "collection": "cambridge_china",
+      "locator": "page:410",
+      "chinese_character_count": 1055,
+      "reading_focus": "historical_explanation",
+      "questions": [
+        "本段承担什么结构或历史解释任务？",
+        "判断如何连接条件、机制、材料、反向力量或结果？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
+        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "cambridge-republican-china-v13-zh",
+      "collection": "cambridge_china",
+      "locator": "page:607",
+      "chinese_character_count": 1062,
+      "reading_focus": "historical_explanation",
+      "questions": [
+        "本段承担什么结构或历史解释任务？",
+        "判断如何连接条件、机制、材料、反向力量或结果？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
+        "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "toynbee-seven-works-zh",
       "collection": "toynbee",
       "locator": "spine:6;file:text/part0004.html",
       "chinese_character_count": 1004,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "汤因比著作集（套装全7册）含《历史研究（上、下）》《人类与大地母亲：一部叙事体世界历史》《一个历史学家的宗教观》《文明经受考验》《习... (z-library.sk, 1lib.sk, z-lib.sk).epub",
+      "source_id": "toynbee-seven-works-zh",
       "collection": "toynbee",
       "locator": "spine:98;file:text/part0095.html",
       "chinese_character_count": 4895,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "汤因比著作集（套装全7册）含《历史研究（上、下）》《人类与大地母亲：一部叙事体世界历史》《一个历史学家的宗教观》《文明经受考验》《习... (z-library.sk, 1lib.sk, z-lib.sk).epub",
+      "source_id": "toynbee-seven-works-zh",
       "collection": "toynbee",
       "locator": "spine:191;file:text/part0186.html",
       "chinese_character_count": 27927,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     },
     {
-      "source": "汤因比著作集（套装全7册）含《历史研究（上、下）》《人类与大地母亲：一部叙事体世界历史》《一个历史学家的宗教观》《文明经受考验》《习... (z-library.sk, 1lib.sk, z-lib.sk).epub",
+      "source_id": "toynbee-seven-works-zh",
       "collection": "toynbee",
       "locator": "spine:276;file:text/part0271.html",
       "chinese_character_count": 13215,
+      "reading_focus": "historical_explanation",
       "questions": [
-        "本段承担什么结构任务？",
+        "本段承担什么结构或历史解释任务？",
         "判断如何连接条件、机制、材料、反向力量或结果？",
-        "句子节奏和连接方式怎样服务该任务？",
+        "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
       ]
     }

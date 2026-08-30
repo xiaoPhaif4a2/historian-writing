@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "cambridge-late-qing-v10-zh",
+      "collection": "cambridge_china",
+      "title": "《剑桥中国晚清史（上卷）》中译本",
+      "sha256": "a1f3eedcb1ecbfeb8de4f7a718474432a53442132315bb7c5d4bfb31cd3778b1"
+    },
+    {
+      "source_id": "cambridge-late-qing-v11-zh",
+      "collection": "cambridge_china",
+      "title": "《剑桥中国晚清史（下卷）》中译本",
+      "sha256": "a655cc753dcbaacdbc3c2ade36d05907bbaf6078ee60a88c6c02307d2c2fb751"
+    },
+    {
+      "source_id": "cambridge-republican-china-v12-zh",
+      "collection": "cambridge_china",
+      "title": "《剑桥中华民国史（上卷）》中译本",
+      "sha256": "d4daf392f68dc33188cacaf89c7b26c68512a859d7e3c7d1bc5a24e7f9a2c59f"
+    },
+    {
+      "source_id": "cambridge-republican-china-v13-zh",
+      "collection": "cambridge_china",
+      "title": "《剑桥中华民国史（下卷）》中译本",
+      "sha256": "0a41f8c6eb8f0b7bba7897b55002e4c0a61904040b2bbdfc15a583dde65826a7"
+    },
+    {
+      "source_id": "toynbee-seven-works-zh",
+      "collection": "toynbee",
+      "title": "汤因比著作七册中译合集",
+      "sha256": "f935e4519f122333cb4f83393f2169c08cb8427c5062c803ed926733b8708ed0",
+      "edition_note": "其中《历史研究》为索麦维尔节略本的中译形态。"
+    },
+    {
+      "source_id": "anna-karenina-zh-gao-fu",
+      "collection": "anna_translation",
+      "title": "安娜·卡列尼娜（套装上下册）（译文名著典藏）",
+      "author": "列夫·托尔斯泰",
+      "translators": ["高惠群", "傅石球"],
+      "publisher": "上海译文出版社",
+      "language": "zh",
+      "sha256": "2dbb02eb3d69e09e041a24e8b3edc854dadf1eaa1f326ece91c040c3e5240d9e",
+      "paper_edition_correspondence": {
+        "date": "2013-06",
+        "isbn": "9787532758999",
+        "confidence": "high",
+        "limit": "EPUB 内另有 2014 Digital Lab 说明和 2019 Calibre 时间戳，只能确认与该纸本底本高度对应，不能据此断言具体数字化封装版本。"
+      },
+      "epub_body_start_href": "text/part0009.html"
+    }
+  ]
+}

@@ -1,54 +1,91 @@
 {
   "sources": [
     {
-      "source": "剑桥中华民国史(上卷) (剑桥中华民国史(上卷)) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
-      "format": "pdf",
-      "bytes": 1754933,
-      "sha256": "d4daf392f68dc33188cacaf89c7b26c68512a859d7e3c7d1bc5a24e7f9a2c59f",
-      "extracted_unit_count": 559,
-      "nonempty_unit_count": 557,
-      "extracted_chinese_character_count": 559608
+      "source_id": "anna-karenina-zh-gao-fu",
+      "collection": "anna_translation",
+      "title": "安娜·卡列尼娜（套装上下册）（译文名著典藏）",
+      "author": "列夫·托尔斯泰",
+      "translators": [
+        "高惠群",
+        "傅石球"
+      ],
+      "publisher": "上海译文出版社",
+      "language": "zh",
+      "sha256": "2dbb02eb3d69e09e041a24e8b3edc854dadf1eaa1f326ece91c040c3e5240d9e",
+      "paper_edition_correspondence": {
+        "date": "2013-06",
+        "isbn": "9787532758999",
+        "confidence": "high",
+        "limit": "EPUB 内另有 2014 Digital Lab 说明和 2019 Calibre 时间戳，只能确认与该纸本底本高度对应，不能据此断言具体数字化封装版本。"
+      },
+      "format": "epub",
+      "bytes": 5218580,
+      "extracted_unit_count": 250,
+      "nonempty_unit_count": 242,
+      "extracted_chinese_character_count": 525612,
+      "archive_member_count": 311,
+      "mimetype_compliant": true,
+      "crc_all_passed": true,
+      "extraction_scope": "body from text/part0009.html"
     },
     {
-      "source": "剑桥中华民国史（下卷） (剑桥中华民国史（下卷）.pdf) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v10-zh",
       "collection": "cambridge_china",
-      "format": "pdf",
-      "bytes": 1930024,
-      "sha256": "0a41f8c6eb8f0b7bba7897b55002e4c0a61904040b2bbdfc15a583dde65826a7",
-      "extracted_unit_count": 609,
-      "nonempty_unit_count": 607,
-      "extracted_chinese_character_count": 604226
-    },
-    {
-      "source": "剑桥中国晚清史, 1800—1911年 (上卷) = The Cambridge History of China, Vol. 10 Late Ching, 1800-1911, Part 1 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-      "collection": "cambridge_china",
+      "title": "《剑桥中国晚清史（上卷）》中译本",
+      "sha256": "a1f3eedcb1ecbfeb8de4f7a718474432a53442132315bb7c5d4bfb31cd3778b1",
       "format": "pdf",
       "bytes": 31666176,
-      "sha256": "a1f3eedcb1ecbfeb8de4f7a718474432a53442132315bb7c5d4bfb31cd3778b1",
       "extracted_unit_count": 768,
       "nonempty_unit_count": 767,
       "extracted_chinese_character_count": 440201
     },
     {
-      "source": "剑桥中国晚清史, 1800—1911年 (下卷) = The Cambridge History of China, Vol. 11 Late Ching, 1800-1911, Part 2 ([美] 费正清 (John King Fairbank) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "source_id": "cambridge-late-qing-v11-zh",
       "collection": "cambridge_china",
+      "title": "《剑桥中国晚清史（下卷）》中译本",
+      "sha256": "a655cc753dcbaacdbc3c2ade36d05907bbaf6078ee60a88c6c02307d2c2fb751",
       "format": "pdf",
       "bytes": 33865625,
-      "sha256": "a655cc753dcbaacdbc3c2ade36d05907bbaf6078ee60a88c6c02307d2c2fb751",
       "extracted_unit_count": 837,
       "nonempty_unit_count": 835,
       "extracted_chinese_character_count": 440476
     },
     {
-      "source": "汤因比著作集（套装全7册）含《历史研究（上、下）》《人类与大地母亲：一部叙事体世界历史》《一个历史学家的宗教观》《文明经受考验》《习... (z-library.sk, 1lib.sk, z-lib.sk).epub",
+      "source_id": "cambridge-republican-china-v12-zh",
+      "collection": "cambridge_china",
+      "title": "《剑桥中华民国史（上卷）》中译本",
+      "sha256": "d4daf392f68dc33188cacaf89c7b26c68512a859d7e3c7d1bc5a24e7f9a2c59f",
+      "format": "pdf",
+      "bytes": 1754933,
+      "extracted_unit_count": 559,
+      "nonempty_unit_count": 557,
+      "extracted_chinese_character_count": 559608
+    },
+    {
+      "source_id": "cambridge-republican-china-v13-zh",
+      "collection": "cambridge_china",
+      "title": "《剑桥中华民国史（下卷）》中译本",
+      "sha256": "0a41f8c6eb8f0b7bba7897b55002e4c0a61904040b2bbdfc15a583dde65826a7",
+      "format": "pdf",
+      "bytes": 1930024,
+      "extracted_unit_count": 609,
+      "nonempty_unit_count": 607,
+      "extracted_chinese_character_count": 604226
+    },
+    {
+      "source_id": "toynbee-seven-works-zh",
       "collection": "toynbee",
+      "title": "汤因比著作七册中译合集",
+      "sha256": "f935e4519f122333cb4f83393f2169c08cb8427c5062c803ed926733b8708ed0",
+      "edition_note": "其中《历史研究》为索麦维尔节略本的中译形态。",
       "format": "epub",
       "bytes": 7245725,
-      "sha256": "f935e4519f122333cb4f83393f2169c08cb8427c5062c803ed926733b8708ed0",
       "extracted_unit_count": 276,
       "nonempty_unit_count": 267,
-      "extracted_chinese_character_count": 1734039
+      "extracted_chinese_character_count": 1734039,
+      "archive_member_count": 327,
+      "mimetype_compliant": true,
+      "crc_all_passed": true
     }
   ]
 }

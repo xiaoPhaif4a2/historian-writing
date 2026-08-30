@@ -1,4 +1,12 @@
 {
+  "profile_policy": {
+    "historical_combined_includes": [
+      "cambridge_china",
+      "toynbee"
+    ],
+    "anna_translation_is_independent": true,
+    "all_corpus_combined_profile": false
+  },
   "marker_groups": {
     "因果": [
       "因此",
@@ -63,17 +71,107 @@
     ]
   },
   "profiles": {
+    "anna_translation": {
+      "unit_count": 250,
+      "nonempty_unit_count": 242,
+      "chinese_character_count": 525612,
+      "paragraph_count": 7310,
+      "paragraph_definition": "nonempty line with at least 8 Chinese characters",
+      "mean_unit_chinese_characters": 2171.95,
+      "sentence_count": 21667,
+      "sentence_length_chinese_characters": {
+        "mean": 24.16,
+        "median": 19,
+        "p25": 10.0,
+        "p75": 33.0,
+        "maximum": 237
+      },
+      "extraction_quality": {
+        "replacement_character_count": 0,
+        "html_residue_count": 0
+      },
+      "markers_per_1000_chinese_characters": {
+        "因果": {
+          "因此": 0.318,
+          "因而": 0.076,
+          "从而": 0.021,
+          "由于": 0.205,
+          "导致": 0.017,
+          "结果": 0.207,
+          "使得": 0.023,
+          "原因": 0.108,
+          "后果": 0.019
+        },
+        "转折限定": {
+          "然而": 0.24,
+          "但是": 1.648,
+          "不过": 0.58,
+          "尽管": 0.297,
+          "虽然": 0.234,
+          "却": 1.117,
+          "反而": 0.042,
+          "同时": 0.283,
+          "另一方面": 0.025
+        },
+        "例证具体化": {
+          "例如": 0.023,
+          "比如": 0.032,
+          "譬如": 0.011,
+          "尤其": 0.127,
+          "具体说来": 0.0,
+          "实际上": 0.044
+        },
+        "判断留白": {
+          "可能": 0.603,
+          "似乎": 0.196,
+          "可以说": 0.021,
+          "未必": 0.017,
+          "大概": 0.146,
+          "往往": 0.051,
+          "倾向于": 0.004,
+          "不能简单地": 0.0
+        },
+        "时间尺度": {
+          "世纪": 0.023,
+          "年代": 0.002,
+          "时期": 0.042,
+          "阶段": 0.01,
+          "长期": 0.019,
+          "短期": 0.0,
+          "此后": 0.025,
+          "此前": 0.0,
+          "与此同时": 0.015
+        },
+        "比较关系": {
+          "相比": 0.032,
+          "相较": 0.0,
+          "不同于": 0.011,
+          "而不是": 0.049,
+          "一方面": 0.049,
+          "另一方面": 0.025,
+          "既": 0.341,
+          "又": 2.789
+        }
+      }
+    },
     "cambridge_china": {
       "unit_count": 2773,
       "nonempty_unit_count": 2766,
       "chinese_character_count": 2044511,
+      "paragraph_count": 79485,
+      "paragraph_definition": "nonempty line with at least 8 Chinese characters",
       "mean_unit_chinese_characters": 739.16,
       "sentence_count": 52438,
       "sentence_length_chinese_characters": {
         "mean": 38.97,
         "median": 34.0,
         "p25": 22.0,
-        "p75": 49.0
+        "p75": 49.0,
+        "maximum": 635
+      },
+      "extraction_quality": {
+        "replacement_character_count": 0,
+        "html_residue_count": 19
       },
       "markers_per_1000_chinese_characters": {
         "因果": {
@@ -143,13 +241,20 @@
       "unit_count": 276,
       "nonempty_unit_count": 267,
       "chinese_character_count": 1734039,
+      "paragraph_count": 9526,
+      "paragraph_definition": "nonempty line with at least 8 Chinese characters",
       "mean_unit_chinese_characters": 6494.53,
       "sentence_count": 41512,
       "sentence_length_chinese_characters": {
         "mean": 41.77,
         "median": 37.0,
         "p25": 25.0,
-        "p75": 53.0
+        "p75": 53.0,
+        "maximum": 1065
+      },
+      "extraction_quality": {
+        "replacement_character_count": 0,
+        "html_residue_count": 0
       },
       "markers_per_1000_chinese_characters": {
         "因果": {
@@ -215,17 +320,24 @@
         }
       }
     },
-    "combined": {
+    "historical_combined": {
       "unit_count": 3049,
       "nonempty_unit_count": 3033,
       "chinese_character_count": 3778550,
+      "paragraph_count": 89011,
+      "paragraph_definition": "nonempty line with at least 8 Chinese characters",
       "mean_unit_chinese_characters": 1245.81,
       "sentence_count": 93950,
       "sentence_length_chinese_characters": {
         "mean": 40.21,
         "median": 35.0,
         "p25": 24.0,
-        "p75": 51.0
+        "p75": 51.0,
+        "maximum": 1065
+      },
+      "extraction_quality": {
+        "replacement_character_count": 0,
+        "html_residue_count": 19
       },
       "markers_per_1000_chinese_characters": {
         "因果": {
