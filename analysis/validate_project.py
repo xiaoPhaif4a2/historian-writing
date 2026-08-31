@@ -36,6 +36,8 @@ REQUIRED = [
     SKILL_ROOT / "agents" / "openai.yaml",
     SKILL_ROOT / "references" / "ability-library.md",
     SKILL_ROOT / "references" / "evidence-boundaries.md",
+    SKILL_ROOT / "references" / "expression-principles.md",
+    SKILL_ROOT / "references" / "genre-routing.md",
     SKILL_ROOT / "references" / "intensity-routing.md",
     SKILL_ROOT / "references" / "literary-language-organization.md",
     SKILL_ROOT / "references" / "quality-gate.md",
@@ -64,7 +66,7 @@ def main() -> None:
     for path in REQUIRED:
         if not path.is_file():
             fail(f"missing required file: {path.relative_to(ROOT)}")
-    for index in range(1, 10):
+    for index in range(1, 15):
         if not list((ROOT / "evals" / "cases").glob(f"{index:02d}-*.md")):
             fail(f"missing evaluation case {index:02d}")
 
@@ -73,6 +75,9 @@ def main() -> None:
         fail("SKILL.md has no valid historian-writing frontmatter")
     if "只在用户明确点名" not in skill_text:
         fail("SKILL.md must retain its explicit-invocation instruction")
+    for signal in ("自然、具体、有来由和去处", "genre-routing.md", "expression-principles.md"):
+        if signal not in skill_text:
+            fail(f"SKILL.md missing comprehensive writing signal: {signal}")
     policy = (SKILL_ROOT / "agents" / "openai.yaml").read_text(encoding="utf-8")
     if "allow_implicit_invocation: false" not in policy:
         fail("agents/openai.yaml must reject implicit invocation")
@@ -138,7 +143,13 @@ def main() -> None:
         fail("Anna extraction quality check failed")
 
     ignored = subprocess.run(
-        ["git", "check-ignore", "sources_and_references", "analysis/output/raw"],
+        [
+            "git",
+            "check-ignore",
+            "--no-index",
+            "sources_and_references/validation-placeholder",
+            "analysis/output/raw/validation-placeholder",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
