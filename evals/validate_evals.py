@@ -20,13 +20,18 @@ REQUIRED_CASE_SIGNALS = {
     "12-calculation-causality-boundary.md": ("计算不等于因果", "随机分流", "点击率", "提交或成交"),
     "13-connector-shell.md": ("连接词外壳", "周三下午", "周六上午", "预先宣布"),
     "14-nonfiction-literary-drift.md": ("小说化诱惑", "1974", "1996", "居民回忆"),
+    "15-social-texture-positive.md": ("蓝色正式工证", "侧窗", "车间介绍信", "行动条件", "余波"),
+    "16-negative-class-caricature.md": ("阶级脸谱", "天生", "天然冷酷", "反事实", "判断限度"),
+    "17-social-texture-fact-boundary.md": ("摩挲盒盖", "雨夜敲门", "没有人记得是谁搬", "认识边界", "去掉形容词"),
 }
 RUBRIC_SIGNALS = (
     "对象与动作",
+    "问题与深度",
     "文体与去处",
     "关系与段落路径",
     "事实与原意",
     "强度匹配",
+    "社会肌理（适用时）",
     "反向测试方法",
     "硬失败",
 )
@@ -45,6 +50,12 @@ COMPREHENSIVE_SMOKE_SIGNALS = {
     "12-output.md": ("15.5%", "18.6%", "3.1 个百分点", "不能说明", "随机分流"),
     "13-output.md": ("41", "29", "周三下午", "周六上午", "试行四周", "不是预先证明"),
     "14-output.md": ("1974", "1996", "1998", "2015", "不能由说明文字补写"),
+}
+SOCIAL_TEXTURE_SMOKE = ROOT / "evals" / "runs" / "2026-09-10-social-texture-smoke"
+SOCIAL_TEXTURE_SMOKE_SIGNALS = {
+    "15-output.md": ("蓝色正式工证", "北门", "侧窗", "介绍信", "7", "2", "18 元", "1992", "1996"),
+    "16-output.md": ("不能证明两种天性", "介绍信", "反事实", "不能写阴暗走廊", "性格"),
+    "17-output.md": ("1978", "五年后", "没有人记得是谁搬", "不能补写", "不能替她说"),
 }
 
 
@@ -88,6 +99,14 @@ def main() -> None:
         missing = [signal for signal in signals if signal not in text]
         if missing:
             fail(f"{filename} lost comprehensive writing signals: {', '.join(missing)}")
+    for filename, signals in SOCIAL_TEXTURE_SMOKE_SIGNALS.items():
+        path = SOCIAL_TEXTURE_SMOKE / filename
+        if not path.is_file():
+            fail(f"missing social-texture smoke output: {filename}")
+        text = path.read_text(encoding="utf-8")
+        missing = [signal for signal in signals if signal not in text]
+        if missing:
+            fail(f"{filename} lost social-texture signals: {', '.join(missing)}")
     for filename, limit in {
         "10-output.md": 240,
         "11-output.md": 340,
@@ -99,12 +118,21 @@ def main() -> None:
         chinese_count = len(re.findall(r"[\u4e00-\u9fff]", text))
         if chinese_count > limit:
             fail(f"{filename} exceeds {limit} Chinese characters")
+    for filename, limit in {"15-output.md": 850, "16-output.md": 650, "17-output.md": 550}.items():
+        text = (SOCIAL_TEXTURE_SMOKE / filename).read_text(encoding="utf-8")
+        chinese_count = len(re.findall(r"[\u4e00-\u9fff]", text))
+        if chinese_count > limit:
+            fail(f"{filename} exceeds {limit} Chinese characters")
     result = ROOT / "evals" / "results" / "2026-08-30-single-run-smoke.md"
     if not result.is_file() or "不构成" not in result.read_text(encoding="utf-8"):
         fail("smoke result must disclose its non-comparative evidence limit")
     comprehensive_result = ROOT / "evals" / "results" / "2026-08-31-comprehensive-single-run-smoke.md"
     if not comprehensive_result.is_file() or "不构成" not in comprehensive_result.read_text(encoding="utf-8"):
         fail("comprehensive smoke result must disclose its non-comparative evidence limit")
+    social_result = ROOT / "evals" / "results" / "2026-09-10-social-texture-single-run-smoke.md"
+    social_text = social_result.read_text(encoding="utf-8") if social_result.is_file() else ""
+    if "单版本" not in social_text or "不构成" not in social_text or "盲" not in social_text:
+        fail("social-texture smoke result must disclose its single-version, non-blind evidence limit")
 
     print("PASS: targeted eval coverage and single-run smoke boundaries are valid")
 

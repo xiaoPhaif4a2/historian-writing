@@ -48,6 +48,24 @@
         "limit": "EPUB 内另有 2014 Digital Lab 说明和 2019 Calibre 时间戳，只能确认与该纸本底本高度对应，不能据此断言具体数字化封装版本。"
       },
       "epub_body_start_href": "text/part0009.html"
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "title": "高老头",
+      "author": "奥诺雷·德·巴尔扎克",
+      "translators": ["傅雷"],
+      "publisher": "湖南文艺出版社·博集天卷",
+      "language": "zh-CN",
+      "sha256": "179d06ca93037ab3226a6fdf0c8003c574d1fd6b3533507bb62c099b24e0d952",
+      "edition": {
+        "date": "2017-11",
+        "isbn": "9787540482992",
+        "evidence": "EPUB 内版权页",
+        "limit": "书目记录限于 EPUB 内可可靠确认的信息；OPF 的 2019-01-29 日期只视为数字封装修改日期，不视为纸本出版日期。"
+      },
+      "epub_body_start_href": "Text/chapter1.xhtml",
+      "epub_body_end_href": "Text/chapter6.xhtml"
     }
   ]
 }

@@ -28,6 +28,7 @@ DEFAULT_SOURCES = ROOT / "sources_and_references"
 DEFAULT_OUTPUT = ROOT / "analysis" / "output"
 DEFAULT_CATALOG = ROOT / "analysis" / "source_catalog.json"
 HISTORICAL_COLLECTIONS = frozenset({"cambridge_china", "toynbee"})
+INDEPENDENT_LITERARY_COLLECTIONS = frozenset({"anna_translation", "balzac_translation"})
 
 SENTENCE_ENDINGS = re.compile(r"(?<=[。！？；])")
 CHINESE_CHAR = re.compile(r"[\u4e00-\u9fff]")
@@ -159,7 +160,9 @@ def epub_quality(path: Path) -> dict[str, object]:
 def extract_epub(path: Path, source: dict[str, object]) -> list[Unit]:
     units = []
     start_href = source.get("epub_body_start_href")
+    end_href = source.get("epub_body_end_href")
     started = start_href is None
+    ended = False
     with zipfile.ZipFile(path) as archive:
         package_path = opf_path(archive)
         package_dir = Path(package_path).parent
@@ -191,8 +194,13 @@ def extract_epub(path: Path, source: dict[str, object]) -> list[Unit]:
                 f"spine:{index};file:{href}",
                 parser.result(),
             ))
+            if end_href is not None and href == end_href:
+                ended = True
+                break
     if start_href is not None and not started:
         raise RuntimeError(f"Configured EPUB body start not found for {source['source_id']}: {start_href}")
+    if end_href is not None and not ended:
+        raise RuntimeError(f"Configured EPUB body end not found for {source['source_id']}: {end_href}")
     return units
 
 
@@ -272,7 +280,7 @@ def write_json(path: Path, value: object) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def run(sources: Path, output: Path, catalog_path: Path) -> None:
+def run(sources: Path, output: Path, catalog_path: Path, incremental: bool = False) -> None:
     raw_dir = output / "raw"
     raw_dir.mkdir(parents=True, exist_ok=True)
     output.mkdir(parents=True, exist_ok=True)
@@ -307,7 +315,11 @@ def run(sources: Path, output: Path, catalog_path: Path) -> None:
         with raw_path.open("w", encoding="utf-8") as handle:
             for unit in units:
                 handle.write(json.dumps(raw_record(unit), ensure_ascii=False) + "\n")
-        public_source = {key: value for key, value in source.items() if key != "epub_body_start_href"}
+        public_source = {
+            key: value
+            for key, value in source.items()
+            if key not in {"epub_body_start_href", "epub_body_end_href"}
+        }
         public_source.update({
             "format": path.suffix.lower().lstrip("."),
             "bytes": path.stat().st_size,
@@ -318,25 +330,43 @@ def run(sources: Path, output: Path, catalog_path: Path) -> None:
         })
         if source.get("epub_body_start_href"):
             public_source["extraction_scope"] = f"body from {source['epub_body_start_href']}"
+            if source.get("epub_body_end_href"):
+                public_source["extraction_scope"] += f" through {source['epub_body_end_href']}"
         inventory.append(public_source)
 
     missing = sorted(set(catalog) - seen_hashes)
-    if missing:
+    if missing and not incremental:
         raise RuntimeError(f"Catalogued sources missing from source directory: {', '.join(missing)}")
 
     profiles = {collection: profile(units) for collection, units in sorted(units_by_collection.items())}
-    historical_units = (
-        unit
-        for collection, units in units_by_collection.items()
-        if collection in HISTORICAL_COLLECTIONS
-        for unit in units
-    )
-    profiles["historical_combined"] = profile(historical_units)
+    present_historical = HISTORICAL_COLLECTIONS.intersection(units_by_collection)
+    if present_historical:
+        if incremental and present_historical != HISTORICAL_COLLECTIONS:
+            raise RuntimeError("Incremental runs cannot update an incomplete historical collection set.")
+        historical_units = (
+            unit
+            for collection, units in units_by_collection.items()
+            if collection in HISTORICAL_COLLECTIONS
+            for unit in units
+        )
+        profiles["historical_combined"] = profile(historical_units)
+
+    if incremental:
+        inventory_path = output / "corpus_inventory.json"
+        profile_path = output / "style_profile.json"
+        if not inventory_path.is_file() or not profile_path.is_file():
+            raise RuntimeError("Incremental analysis requires existing public inventory and profile outputs.")
+        prior_inventory = json.loads(inventory_path.read_text(encoding="utf-8")).get("sources", [])
+        prior_profiles = json.loads(profile_path.read_text(encoding="utf-8")).get("profiles", {})
+        current_ids = {str(item["source_id"]) for item in inventory}
+        inventory = [item for item in prior_inventory if str(item.get("source_id")) not in current_ids] + inventory
+        profiles = {**prior_profiles, **profiles}
+
     write_json(output / "corpus_inventory.json", {"sources": sorted(inventory, key=lambda item: item["source_id"])})
     write_json(output / "style_profile.json", {
         "profile_policy": {
             "historical_combined_includes": sorted(HISTORICAL_COLLECTIONS),
-            "anna_translation_is_independent": True,
+            "independent_literary_profiles": sorted(INDEPENDENT_LITERARY_COLLECTIONS),
             "all_corpus_combined_profile": False,
         },
         "marker_groups": MARKER_GROUPS,
@@ -350,12 +380,17 @@ def main() -> None:
     parser.add_argument("--sources", type=Path, default=DEFAULT_SOURCES)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
+    parser.add_argument(
+        "--incremental",
+        action="store_true",
+        help="merge present sources into existing public outputs; incomplete historical updates are rejected",
+    )
     args = parser.parse_args()
     if not args.sources.is_dir():
         raise SystemExit(f"Source directory does not exist: {args.sources}")
     if not args.catalog.is_file():
         raise SystemExit(f"Source catalog does not exist: {args.catalog}")
-    run(args.sources, args.output, args.catalog)
+    run(args.sources, args.output, args.catalog, incremental=args.incremental)
 
 
 if __name__ == "__main__":
