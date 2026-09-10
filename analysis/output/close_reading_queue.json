@@ -1,5 +1,5 @@
 {
-  "sample_count": 26,
+  "sample_count": 41,
   "samples": [
     {
       "source_id": "anna-karenina-zh-gao-fu",
@@ -337,6 +337,216 @@
         "判断如何连接条件、机制、材料、反向力量或结果？",
         "尺度、句子节奏和连接方式怎样服务该任务？",
         "哪些部分只属于该材料或译者，不能升级成通用规则？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:5;file:Text/chapter1.xhtml;paragraph:49",
+      "chinese_character_count": 537,
+      "reading_focus": "social_texture",
+      "candidate_function": "object_as_evidence",
+      "selection_marker_hits": 4,
+      "questions": [
+        "物件怎样证明人物之间的资源、债务、身份或依附关系，而不只是布景？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:7;file:Text/chapter3.xhtml;paragraph:321",
+      "chinese_character_count": 385,
+      "reading_focus": "social_texture",
+      "candidate_function": "object_as_evidence",
+      "selection_marker_hits": 4,
+      "questions": [
+        "物件怎样证明人物之间的资源、债务、身份或依附关系，而不只是布景？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:8;file:Text/chapter4.xhtml;paragraph:233",
+      "chinese_character_count": 223,
+      "reading_focus": "social_texture",
+      "candidate_function": "object_as_evidence",
+      "selection_marker_hits": 4,
+      "questions": [
+        "物件怎样证明人物之间的资源、债务、身份或依附关系，而不只是布景？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:5;file:Text/chapter1.xhtml;paragraph:5",
+      "chinese_character_count": 406,
+      "reading_focus": "social_texture",
+      "candidate_function": "space_as_hierarchy",
+      "selection_marker_hits": 7,
+      "questions": [
+        "空间的进入、隔离、远近或上下关系怎样改变人物可采取的行动？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:8;file:Text/chapter4.xhtml;paragraph:7",
+      "chinese_character_count": 507,
+      "reading_focus": "social_texture",
+      "candidate_function": "space_as_hierarchy",
+      "selection_marker_hits": 6,
+      "questions": [
+        "空间的进入、隔离、远近或上下关系怎样改变人物可采取的行动？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:10;file:Text/chapter6.xhtml;paragraph:75",
+      "chinese_character_count": 524,
+      "reading_focus": "social_texture",
+      "candidate_function": "space_as_hierarchy",
+      "selection_marker_hits": 4,
+      "questions": [
+        "空间的进入、隔离、远近或上下关系怎样改变人物可采取的行动？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:7;file:Text/chapter3.xhtml;paragraph:107",
+      "chinese_character_count": 4057,
+      "reading_focus": "social_texture",
+      "candidate_function": "social_circulation",
+      "selection_marker_hits": 27,
+      "questions": [
+        "金钱、职位、名誉或亲情怎样经由可追踪的交换链改变行动条件？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:9;file:Text/chapter5.xhtml;paragraph:419",
+      "chinese_character_count": 717,
+      "reading_focus": "social_texture",
+      "candidate_function": "social_circulation",
+      "selection_marker_hits": 11,
+      "questions": [
+        "金钱、职位、名誉或亲情怎样经由可追踪的交换链改变行动条件？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:8;file:Text/chapter4.xhtml;paragraph:11",
+      "chinese_character_count": 982,
+      "reading_focus": "social_texture",
+      "candidate_function": "social_circulation",
+      "selection_marker_hits": 10,
+      "questions": [
+        "金钱、职位、名誉或亲情怎样经由可追踪的交换链改变行动条件？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:6;file:Text/chapter2.xhtml;paragraph:349",
+      "chinese_character_count": 995,
+      "reading_focus": "social_texture",
+      "candidate_function": "desire_institutionalized",
+      "selection_marker_hits": 7,
+      "questions": [
+        "欲望怎样取得制度形式：需要哪种资格、关系、程序、职位或认可？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:8;file:Text/chapter4.xhtml;paragraph:3",
+      "chinese_character_count": 504,
+      "reading_focus": "social_texture",
+      "candidate_function": "desire_institutionalized",
+      "selection_marker_hits": 5,
+      "questions": [
+        "欲望怎样取得制度形式：需要哪种资格、关系、程序、职位或认可？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:9;file:Text/chapter5.xhtml;paragraph:11",
+      "chinese_character_count": 991,
+      "reading_focus": "social_texture",
+      "candidate_function": "desire_institutionalized",
+      "selection_marker_hits": 5,
+      "questions": [
+        "欲望怎样取得制度形式：需要哪种资格、关系、程序、职位或认可？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:5;file:Text/chapter1.xhtml;paragraph:129",
+      "chinese_character_count": 777,
+      "reading_focus": "social_texture",
+      "candidate_function": "local_to_social_order",
+      "selection_marker_hits": 7,
+      "questions": [
+        "局部场所怎样通过人物流动、资源交换或评价规则连接更大的社会秩序？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:7;file:Text/chapter3.xhtml;paragraph:111",
+      "chinese_character_count": 551,
+      "reading_focus": "social_texture",
+      "candidate_function": "local_to_social_order",
+      "selection_marker_hits": 7,
+      "questions": [
+        "局部场所怎样通过人物流动、资源交换或评价规则连接更大的社会秩序？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
+      ]
+    },
+    {
+      "source_id": "pere-goriot-zh-fu-lei",
+      "collection": "balzac_translation",
+      "locator": "spine:9;file:Text/chapter5.xhtml;paragraph:495",
+      "chinese_character_count": 558,
+      "reading_focus": "social_texture",
+      "candidate_function": "local_to_social_order",
+      "selection_marker_hits": 7,
+      "questions": [
+        "局部场所怎样通过人物流动、资源交换或评价规则连接更大的社会秩序？",
+        "删除形容词和评价词后，社会关系与作用机制是否仍能成立？",
+        "哪些人物、情节、固定句式、价值判断或时代类型化偏见必须留在原作？"
       ]
     }
   ]

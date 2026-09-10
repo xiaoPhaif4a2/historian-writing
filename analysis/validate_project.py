@@ -15,7 +15,15 @@ SKILL = SKILL_ROOT / "SKILL.md"
 LOCAL_LINK = re.compile(r"\]\((?!https?://|#)([^)#]+)(?:#[^)]+)?\)")
 SAFE_SOURCE_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ANNA_HASH = "2dbb02eb3d69e09e041a24e8b3edc854dadf1eaa1f326ece91c040c3e5240d9e"
-EXPECTED_PROFILES = {"cambridge_china", "toynbee", "anna_translation", "historical_combined"}
+BALZAC_HASH = "179d06ca93037ab3226a6fdf0c8003c574d1fd6b3533507bb62c099b24e0d952"
+EXPECTED_PROFILES = {
+    "cambridge_china",
+    "toynbee",
+    "anna_translation",
+    "balzac_translation",
+    "historical_combined",
+}
+INDEPENDENT_LITERARY_PROFILES = ["anna_translation", "balzac_translation"]
 FORBIDDEN_PUBLIC_STRINGS = (
     "z" + "-library",
     "1" + "lib.sk",
@@ -30,6 +38,7 @@ REQUIRED = [
     ROOT / "analysis" / "source_catalog.json",
     ROOT / "analysis" / "style-findings.md",
     ROOT / "analysis" / "anna-close-reading-notes.md",
+    ROOT / "analysis" / "balzac-close-reading-notes.md",
     ROOT / "analysis" / "output" / "corpus_inventory.json",
     ROOT / "analysis" / "output" / "style_profile.json",
     ROOT / "analysis" / "output" / "close_reading_queue.json",
@@ -41,6 +50,7 @@ REQUIRED = [
     SKILL_ROOT / "references" / "intensity-routing.md",
     SKILL_ROOT / "references" / "literary-language-organization.md",
     SKILL_ROOT / "references" / "quality-gate.md",
+    SKILL_ROOT / "references" / "social-texture.md",
     SKILL_ROOT / "references" / "style-signals.md",
     SKILL_ROOT / "references" / "task-modes.md",
     ROOT / "evals" / "README.md",
@@ -66,7 +76,7 @@ def main() -> None:
     for path in REQUIRED:
         if not path.is_file():
             fail(f"missing required file: {path.relative_to(ROOT)}")
-    for index in range(1, 15):
+    for index in range(1, 18):
         if not list((ROOT / "evals" / "cases").glob(f"{index:02d}-*.md")):
             fail(f"missing evaluation case {index:02d}")
 
@@ -75,7 +85,14 @@ def main() -> None:
         fail("SKILL.md has no valid historian-writing frontmatter")
     if "只在用户明确点名" not in skill_text:
         fail("SKILL.md must retain its explicit-invocation instruction")
-    for signal in ("自然、具体、有来由和去处", "genre-routing.md", "expression-principles.md"):
+    for signal in (
+        "问题发动机",
+        "历史发动机",
+        "人性发动机",
+        "语言发动机",
+        "social-texture.md",
+        "陌生化、反事实、代价、双尺度与余波",
+    ):
         if signal not in skill_text:
             fail(f"SKILL.md missing comprehensive writing signal: {signal}")
     policy = (SKILL_ROOT / "agents" / "openai.yaml").read_text(encoding="utf-8")
@@ -102,8 +119,8 @@ def main() -> None:
     inventory = json.loads((ROOT / "analysis" / "output" / "corpus_inventory.json").read_text(encoding="utf-8"))
     profile_doc = json.loads((ROOT / "analysis" / "output" / "style_profile.json").read_text(encoding="utf-8"))
     sources = inventory.get("sources", [])
-    if len(catalog.get("sources", [])) != 6 or len(sources) != 6:
-        fail("current corpus must contain exactly six catalogued source files")
+    if len(catalog.get("sources", [])) != 7 or len(sources) != 7:
+        fail("current corpus must contain exactly seven catalogued source files")
     if any(not SAFE_SOURCE_ID.fullmatch(str(source.get("source_id", ""))) for source in sources):
         fail("inventory has an unsafe source_id")
 
@@ -113,8 +130,8 @@ def main() -> None:
     policy_doc = profile_doc.get("profile_policy", {})
     if policy_doc.get("all_corpus_combined_profile") is not False:
         fail("all-corpus combined profile must remain disabled")
-    if policy_doc.get("anna_translation_is_independent") is not True:
-        fail("Anna profile must be explicitly independent")
+    if policy_doc.get("independent_literary_profiles") != INDEPENDENT_LITERARY_PROFILES:
+        fail("Anna and Balzac profiles must be explicitly independent")
     historical_sum = profiles["cambridge_china"]["chinese_character_count"] + profiles["toynbee"]["chinese_character_count"]
     if profiles["historical_combined"]["chinese_character_count"] != historical_sum:
         fail("historical_combined contains a non-historical collection")
@@ -141,6 +158,49 @@ def main() -> None:
         fail("Anna sentence median changed")
     if anna["extraction_quality"] != {"replacement_character_count": 0, "html_residue_count": 0}:
         fail("Anna extraction quality check failed")
+
+    balzac_source = next((source for source in sources if source.get("source_id") == "pere-goriot-zh-fu-lei"), None)
+    if balzac_source is None or balzac_source.get("sha256") != BALZAC_HASH:
+        fail("Balzac source identity does not match the verified EPUB")
+    if balzac_source.get("archive_member_count") != 33:
+        fail("Balzac EPUB member count changed")
+    if balzac_source.get("mimetype_compliant") is not True or balzac_source.get("crc_all_passed") is not True:
+        fail("Balzac EPUB archive validation failed")
+    if balzac_source.get("extraction_scope") != "body from Text/chapter1.xhtml through Text/chapter6.xhtml":
+        fail("Balzac body boundary changed")
+    balzac = profiles["balzac_translation"]
+    expected_balzac = {
+        "unit_count": 6,
+        "nonempty_unit_count": 6,
+        "chinese_character_count": 132631,
+        "paragraph_count": 1752,
+        "sentence_count": 6218,
+    }
+    for field, expected in expected_balzac.items():
+        if balzac.get(field) != expected:
+            fail(f"Balzac profile {field} changed: expected {expected}, got {balzac.get(field)}")
+    if balzac["sentence_length_chinese_characters"].get("median") != 18:
+        fail("Balzac sentence median changed")
+    if balzac["extraction_quality"] != {"replacement_character_count": 0, "html_residue_count": 0}:
+        fail("Balzac extraction quality check failed")
+
+    queue = json.loads((ROOT / "analysis" / "output" / "close_reading_queue.json").read_text(encoding="utf-8"))
+    balzac_samples = [
+        sample for sample in queue.get("samples", [])
+        if sample.get("collection") == "balzac_translation"
+    ]
+    functions = {
+        "object_as_evidence",
+        "space_as_hierarchy",
+        "social_circulation",
+        "desire_institutionalized",
+        "local_to_social_order",
+    }
+    if len(balzac_samples) != 15:
+        fail("Balzac close-reading queue must contain exactly 15 samples")
+    for function in functions:
+        if sum(sample.get("candidate_function") == function for sample in balzac_samples) != 3:
+            fail(f"Balzac close-reading queue must contain three samples for {function}")
 
     ignored = subprocess.run(
         [

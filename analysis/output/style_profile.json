@@ -4,7 +4,10 @@
       "cambridge_china",
       "toynbee"
     ],
-    "anna_translation_is_independent": true,
+    "independent_literary_profiles": [
+      "anna_translation",
+      "balzac_translation"
+    ],
     "all_corpus_combined_profile": false
   },
   "marker_groups": {
@@ -400,6 +403,89 @@
           "另一方面": 0.092,
           "既": 0.292,
           "又": 0.802
+        }
+      }
+    },
+    "balzac_translation": {
+      "unit_count": 6,
+      "nonempty_unit_count": 6,
+      "chinese_character_count": 132631,
+      "paragraph_count": 1752,
+      "paragraph_definition": "nonempty line with at least 8 Chinese characters",
+      "mean_unit_chinese_characters": 22105.17,
+      "sentence_count": 6218,
+      "sentence_length_chinese_characters": {
+        "mean": 21.19,
+        "median": 18.0,
+        "p25": 11.0,
+        "p75": 28.0,
+        "maximum": 168
+      },
+      "extraction_quality": {
+        "replacement_character_count": 0,
+        "html_residue_count": 0
+      },
+      "markers_per_1000_chinese_characters": {
+        "因果": {
+          "因此": 0.158,
+          "因而": 0.0,
+          "从而": 0.0,
+          "由于": 0.03,
+          "导致": 0.0,
+          "结果": 0.098,
+          "使得": 0.0,
+          "原因": 0.083,
+          "后果": 0.015
+        },
+        "转折限定": {
+          "然而": 0.015,
+          "但是": 0.015,
+          "不过": 0.4,
+          "尽管": 0.158,
+          "虽然": 0.204,
+          "却": 0.392,
+          "反而": 0.038,
+          "同时": 0.128,
+          "另一方面": 0.008
+        },
+        "例证具体化": {
+          "例如": 0.038,
+          "比如": 0.0,
+          "譬如": 0.038,
+          "尤其": 0.045,
+          "具体说来": 0.0,
+          "实际上": 0.015
+        },
+        "判断留白": {
+          "可能": 0.158,
+          "似乎": 0.181,
+          "可以说": 0.038,
+          "未必": 0.008,
+          "大概": 0.256,
+          "往往": 0.083,
+          "倾向于": 0.0,
+          "不能简单地": 0.0
+        },
+        "时间尺度": {
+          "世纪": 0.121,
+          "年代": 0.015,
+          "时期": 0.03,
+          "阶段": 0.023,
+          "长期": 0.023,
+          "短期": 0.0,
+          "此后": 0.008,
+          "此前": 0.0,
+          "与此同时": 0.0
+        },
+        "比较关系": {
+          "相比": 0.045,
+          "相较": 0.0,
+          "不同于": 0.0,
+          "而不是": 0.023,
+          "一方面": 0.038,
+          "另一方面": 0.008,
+          "既": 0.317,
+          "又": 2.051
         }
       }
     }
